@@ -1,0 +1,123 @@
+.thumb{
+    background-color: #ddd !important;
+    img{
+        width:100%; display:block;
+    }
+
+    &:hover{
+        
+    }
+}
+
+
+.thumb169{
+    position: relative;
+    // padding-top: 56.25%;
+    padding-top: 52%;
+    overflow: hidden;
+    clear: both;
+    display:block;
+    background-color: #ddd !important;
+
+    img{
+        position: absolute;
+        left:0; right:0;
+        top:0; bottom:0; 
+        width:100%; 
+        
+    }
+}
+
+.thumb43{
+    padding-top: 75%;
+    position: relative;
+    overflow: hidden;
+    clear: both;
+    display:block;
+    background-color: #ddd !important;
+
+    img{
+        position: absolute;
+        left:0; right:0;
+        top:0; bottom:0;
+        width:100%;
+        margin:auto;
+        display: block;
+    }
+}
+
+.thumb1{
+    @extend .thumb169;
+    @include transition(200ms);
+    background-color: #ddd !important;
+
+
+    &:hover{
+        @include boxshadow(0 0 3px, rgba(0,0,0,0.7));
+    }
+
+    img{
+        width:100%;
+    }
+}
+
+.thumb2{
+    @extend .thumb43;
+    @include transition(200ms);
+    background-color: #ddd !important;
+    &:hover{
+        @include boxshadow(0 0 5px, rgba(0,0,0,0.5));
+        // img{
+        //     width:104%; max-width:none;
+        //     margin:auto;
+        //     transform: translateX(-2%);
+        // }
+    }
+}
+
+
+.vdo-thumb{
+    position: relative; cursor: pointer;
+    background-color: #ddd !important;
+    min-height: 420px;
+    @extend .thumb;
+
+    &:after{
+        content: '';
+        // @include svgmask('../images/icons/play.svg',rgba(255, 255, 255, 0.85));
+        width: 70px; height: 70px;
+        position: absolute;
+        top: 0; left: 0;
+        right: 0;  bottom: 0;
+        margin: auto;  z-index: 1;
+        @include transition(300ms);
+    }
+
+    &:hover{
+        &:after{
+            display:block; background-color:#fff;
+        }
+    }
+}
+
+.vdo-thumb-small{
+    position: relative; cursor: pointer;
+    @extend .thumb169;
+
+    &:after{
+        content: '';
+        // @include svgmask('../images/icons/play.svg',rgba(255, 255, 255, 0.85));
+        width: 25px; height: 25px;
+        position: absolute;
+        top: 0; left: 0;
+        right: 0;  bottom: 0;
+        margin: auto;  z-index: 1;
+        @include transition(300ms);
+    }
+
+    &:hover{
+        &:after{
+            display:block; background-color:#fff;
+        }
+    }
+}

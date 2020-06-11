@@ -1,0 +1,37 @@
+.page-contact{
+    .contact-map{
+        padding:40px 0;
+    }
+
+    .section-contact{
+        background:#eee;
+        padding:20px;
+        height: 100%;
+        text-align: center;
+
+        &:before{
+            content:''; display:inline-block;
+        }
+
+        &.section-email{
+            &:before{
+                @include svgmask('/images/icons/icon-email.svg',$themecolor);
+                width:40px; height: 40px;
+            }
+        }
+
+        &.section-addr{
+            &:before{
+                @include svgmask('/images/icons/icon-map.svg',$themecolor);
+                width:30px; height: 40px;
+            }
+        }
+
+        &.section-tel{
+            &:before{
+                @include svgmask('/images/icons/icon-phone.svg',$themecolor);
+                width:35px; height: 35px;
+            }
+        }
+    }
+}

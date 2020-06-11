@@ -1,0 +1,24 @@
+.press-list{
+    @extend .client-list;
+
+    li{
+        padding:0px;
+        height: auto;
+        width:auto;
+        position: relative;
+
+        img{
+            position: relative;
+            z-index: 1;
+        }
+
+        &:before{
+            content:'';
+            background:$themecolor;
+            position: absolute;
+            z-index: 0;
+            left:-5px; top:-5px;
+            width:50%; height: 50%;
+        }
+    }
+}

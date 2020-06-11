@@ -1,0 +1,239 @@
+.home-slide{
+    position: relative;
+
+    &:after{
+        content:''; position: absolute;
+        height: 100px; width:500px;
+        bottom:-30px; left:-30px;
+        background:$themecolor;
+        z-index: 0;
+    }
+
+    a,img{
+        display: block; width:100%;
+    }
+
+    .slick-slider{
+        z-index: 1;
+    }
+
+    nav{
+        position: absolute;
+        background:#fff;
+        bottom:25px; left:20px;
+        z-index: 2;
+        font-size:0.9rem;
+
+        .slide-prev, .slide-next{
+            width:90px; height: 44px;
+            display:inline-block;
+            border:none;
+        }   
+    
+        .slide-prev{
+            border-right:1px solid #ddd;
+            &:before{
+                content:''; display:inline-block;
+                @include svgmask('/images/icons/prev.svg', $themecolor);
+                width:15px; height: 13px;
+                margin-right:5px;
+                vertical-align: middle;
+            }
+        }
+
+        .slide-next{
+            &:after{
+                content:''; display:inline-block;
+                @include svgmask('/images/icons/next.svg', $themecolor);
+                width:15px; height: 13px;
+                margin-left:5px;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+.about-experience{
+    clear: both; padding:50px 0;
+    font-size:1.2rem;
+    color:#000;
+
+    &:before{
+        content:'';
+        width:300px;
+        height: 4px;
+        background:$themecolor;
+        display:block;
+        margin:30px auto;
+    }
+
+    .left, .right{
+        strong, span{
+            display:block;
+        }
+
+        strong{
+            font-size:6rem;
+            font-family: 'Caveat Brush';
+            font-weight: 400;
+            line-height: 1;
+        }
+
+        span{
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+
+    .left{
+        padding:0 80px 0 0; color:#000;
+
+        strong{
+
+            color:#f00;
+        }
+    }
+
+    .right{
+        padding:0 0 0 80px;
+    }
+}
+
+
+
+.our-mission{
+    background:url('/images/our-mission-bg.jpg') no-repeat left top;
+    background-size:42% auto;
+    display: flex;
+    font-family: 'Source Sans Pro';
+    margin:60px 0 0;
+    justify-content: space-between;
+    // background: $themecolor;
+    
+    // .left, .right{
+    //     width:50%;
+    // }
+
+    .left{
+        
+        color:#fff;
+        text-align: center;
+        align-items: center;
+        font-size:2.6rem;
+        position: relative;
+        width:40%;
+
+        .box-center{
+            margin:auto;
+        }
+
+        
+
+        span{
+            display: block; margin:10px 0;
+            font-family: 'Caveat Brush';
+            font-size:2.2rem;
+            text-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+
+            &:first-child{
+                font-weight: 300;
+            }
+
+            &:last-child{
+                font-size:2.6rem;
+            }
+        }
+    }
+
+    .right{
+        width: 58%; float: right;
+
+        img{
+            width:100%;
+        }
+    }
+}
+
+
+.home-project{
+    @extend .flexx-box;
+    justify-content: space-between;
+    margin:100px 0 0;
+    background:url('/images/ourproject-bg.jpg') repeat right top;
+    background-size:auto 100%;
+
+    // .left, .right{
+    //     width:48%;
+    // }
+
+    .left{
+        width:58%;
+
+        a,img{
+            width:100%;
+        }
+    }
+
+    .right{
+        color:#000;
+        position: relative;
+        width:40%;
+
+        strong, span{
+            
+        }
+
+        strong{
+            display: block;
+            font-family: 'Caveat Brush';
+            font-size:2.5rem;
+            margin-bottom:15px;
+            text-transform: uppercase;
+            display:none;
+        }
+
+        span{
+            // @extend .six-clamp;
+            font-size:1.6rem;
+            font-family: 'Caveat Brush';
+            text-align: center;
+        }
+    }
+}
+
+.home-ouroffice{
+    @extend .flexx-box;
+    justify-content: space-between;
+    margin:100px 0 0;
+    background:url('/images/contact-bg.jpg') repeat left top;
+    background-size:auto 100%;
+
+    .left{
+        position: relative;
+        width:40%; box-sizing: border-box;
+        padding:30px; color:#000;
+
+        strong{
+            display: none;
+            font-family: 'Caveat Brush';
+            font-size:2.5rem;
+            margin-bottom:15px;
+            text-transform: uppercase;
+        }
+
+        span{
+            // @extend .six-clamp;
+            font-size:1.6rem;
+            font-family: 'Caveat Brush';
+            text-align: center;
+        }
+    }
+
+    .right{
+        width:58%; 
+
+        iframe, img, a{
+            width:100%; display:block;
+        }
+    }
+}

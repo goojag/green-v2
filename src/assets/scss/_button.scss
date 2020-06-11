@@ -1,0 +1,54 @@
+.btn{
+    display: inline-block;
+    border:1px solid #ddd;
+    box-shadow: 0 0 2px rgba(0,0,0,0.1);
+    padding:5px 20px;
+    font-size:0.9rem;
+    font-family: 'Source Sans Pro';
+    transition:ease-in-out 200ms;
+
+    &:hover{
+        box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+}
+
+.btn1{
+    @extend .btn;
+    color:$themecolor;
+    text-transform: uppercase;
+    border-bottom:2px solid $themecolor;
+   
+}
+
+.btn-download{
+    padding:20px  35px;
+    position: relative;
+    font-size:1.3rem;
+    margin:15px auto;
+    display:block;
+    text-align: center;
+    width:fit-content;
+    border-bottom-width: 4px;
+
+    &:after{
+        content:''; display: inline-block;
+        @include svgmask('/images/icons/icon-down.svg', #000);
+        width:15px; height: 19px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left:20px;
+    }
+}
+
+.btn-viewall{
+    @extend .btn1;
+    padding:8px  35px;
+    position: relative;
+    font-size:1.3rem;
+    margin:15px auto;
+    display:block;
+    text-align: center;
+    width:fit-content;
+    border-bottom-width: 4px;
+    width:200px;
+}

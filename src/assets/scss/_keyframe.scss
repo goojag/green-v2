@@ -1,0 +1,32 @@
+@keyframes mouse-over {
+  0% {
+    opacity: 0;
+    top: 70px;
+  }
+  100% {
+    opacity: 1;
+    top: 54px;
+  }
+}
+
+@keyframes mouse-out {
+  0% {
+    opacity: 1;
+    top: 54px;
+    max-height: fit-content;
+  }
+  100% {
+    opacity: 0;
+    top: 70px;
+    max-height: 0px;
+  }
+}
+
+@keyframes slide-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

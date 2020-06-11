@@ -1,0 +1,107 @@
+
+@include breakpoint(small) {
+
+    .btn-viewall{
+        font-size:1rem;
+    }
+
+    header {
+        padding:20px 0;
+
+        .main-menu {
+            font-size:1rem; margin:20px 0 0;
+
+            a{
+                margin:0 10px;
+            }
+        }
+
+        .top-lan{
+            top:-15px;
+            right:5px;
+        }
+    }
+
+    .about-experience {
+        font-size:1rem;
+
+        &:before{
+            width:100%;
+        }
+
+        .left, .right {
+            text-align: center !important;
+
+            strong{
+                font-size:4rem;
+            }
+        }
+
+        .left{
+            padding-right:10px;
+        }
+
+        .right{
+            padding-left:10px;
+        }
+    }
+
+    
+
+    .home-slide{
+        &:after{
+            width:100%;
+        }
+    }
+    
+
+
+    .product-list{
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 10px;
+
+        li{
+            .list-text, a:after{
+                position: static;
+                opacity: 1;
+            }
+
+            .list-text{
+                color:$themecolor;
+                font-size:0.9rem;
+                text-align: left;
+                margin:0; 
+                margin-top:5px;
+            }
+        }
+    }
+
+    .project-detail-list{
+        .react_lightgallery_item{
+            width:50%;
+        }
+    }
+
+    .project-detail-img{
+        grid-template-columns: repeat(1,1fr);
+        flex-wrap: wrap;
+
+        li{
+            width:100%;
+        }
+    }
+
+    .client-list, .press-list{
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+        align-items: center;
+    }
+
+    .page-joinus {
+        .job-right {
+            .job-h{
+                margin-top:20px;
+            }
+        }
+    }
+}

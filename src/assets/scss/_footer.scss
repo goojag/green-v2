@@ -1,0 +1,72 @@
+footer{
+    text-align: center;
+    padding:70px 0 30px;
+    position: absolute;
+    bottom:0; left:0;
+    width:100%;
+
+    .text-logo{
+        color:$textcolor;
+        font-size:1rem;
+
+        span{
+            color:$themecolor;
+        }
+    }
+
+    .foot-social{
+        display:flex;
+        justify-content: center;
+        padding:15px 0;
+
+        li{
+            list-style:none;
+            margin:0 5px;
+
+            img{
+                width:23px;
+            }
+
+            a{
+                width:23px; height: 23px;
+                display: block;
+
+                &.pintorest{
+                    @include svgmask('/images/icons/pintorest.svg',#444);
+
+                    &:hover{
+                        background-color:$pintorest;
+                    }
+                }
+                &.facebook{
+                    @include svgmask('/images/icons/facebook.svg',#444);
+
+                    &:hover{
+                        background-color:$facebook;
+                    }
+                }
+                &.ig{
+                    @include svgmask('/images/icons/instagram.svg',#444);
+
+                    &:hover{
+                        background-color:$ig;
+                    }
+                }
+                &.in{
+                    @include svgmask('/images/icons/in.svg',#444);
+
+                    &:hover{
+                        background-color:$in;
+                    }
+                }
+                &.youtube{
+                    @include svgmask('/images/icons/youtube.svg',#444);
+
+                    &:hover{
+                        background-color:$youtube;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.client-list{
+    display:grid; align-items: center;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 20px;
+    justify-content: center;
+    padding:40px 0 20px;
+    
+    li{
+        list-style: none;
+        width:160px; margin-bottom:20px;
+        height: 160px;
+        border:1px solid #ddd;
+        display:flex; align-items: center;
+        padding:30px; box-sizing: border-box;
+
+        img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}
